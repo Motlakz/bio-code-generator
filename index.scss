@@ -1,0 +1,65 @@
+$indigo-dye: #044b7f;
+$teal: #107e7d;
+$tea-green: #D0FFD6;
+$charcoal: #2F3E46;
+$prussian-blue: #18314F;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $prussian-blue;
+    color: $tea-green;
+    font-family: 'Quicksand', 'Lexend Deca', 'Ubuntu', sans-serif;
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+
+        form {
+            margin-top: 20px;
+            position: relative;
+            display: inline-block;
+            max-width: 750px;
+            width: 100%;
+
+            input {
+                border: 2px solid $teal;
+                color: $teal;
+                
+                padding: 12px;
+                width: 100%;
+
+                &:focus {
+                    outline: 2px solid $tea-green;
+                }
+            }
+
+            button {
+                background-color: $tea-green;
+                border: 2px solid $indigo-dye;
+                color: $indigo-dye;
+                cursor: pointer;
+                font-family: 'Ubuntu', 'Lexend Deca', sans-serif;
+                font-weight: 600;
+                padding: 8px;
+                position: absolute;
+                top: 50%;
+                right: 4px;
+                transform: translateY(-50%);
+
+                &:hover {
+                    background-color: $teal;
+                    color: $tea-green;
+                    border: 2px solid $tea-green;
+                }
+            }
+        }
+    }
+}

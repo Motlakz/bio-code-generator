@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #18314F;
+  color: #D0FFD6;
+  font-family: "Quicksand", "Lexend Deca", "Ubuntu", sans-serif;
+}
+body main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+body main form {
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  max-width: 750px;
+  width: 100%;
+}
+body main form input {
+  border: 2px solid #107e7d;
+  color: #107e7d;
+  padding: 12px;
+  width: 100%;
+}
+body main form input:focus {
+  outline: 2px solid #D0FFD6;
+}
+body main form button {
+  background-color: #D0FFD6;
+  border: 2px solid #044b7f;
+  color: #044b7f;
+  cursor: pointer;
+  font-family: "Ubuntu", "Lexend Deca", sans-serif;
+  font-weight: 600;
+  padding: 8px;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+}
+body main form button:hover {
+  background-color: #107e7d;
+  color: #D0FFD6;
+  border: 2px solid #D0FFD6;
+}/*# sourceMappingURL=index.css.map */
