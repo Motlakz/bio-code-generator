@@ -17,10 +17,22 @@
     </div>
     <main class="container">
         <h2><span><i class="bi bi-upc-scan"></i></span> QR CODE GENERATOR</h2>
-        <form action="">
-            <input type="url" placeholder="Enter an URL">
-            <button type="submit" class="generator">Get QR Code</button>
+        <form class="form">
+            <input type="url" class="input" id="url-input" placeholder="Enter an URL" autocomplete="off">
+            <button type="submit" class="generator" onclick="handleSubmit(event)">Get QR Code</button>
         </form>
+        <div class="generated-code">
+            <div class="code-block">
+                <figure>
+                    <img src="" id="qr-img" class="qr-image" alt="">
+                </figure>
+            </div>
+            <div class="buttons">
+                <button class="download">DOWNLOAD <span><i class="bi bi-download"></i></span></button>
+                <button class="share">SHARE <span><i class="bi bi-share-fill"></i></span></button>
+            </div>
+        </div>
     </main>
+    <script src="./script.js"></script>
 </body>
 </html>
