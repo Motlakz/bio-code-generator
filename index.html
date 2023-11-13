@@ -17,7 +17,7 @@
     </div>
     <main class="container">
         <h2><span><i class="bi bi-upc-scan"></i></span> QR CODE GENERATOR</h2>
-        <form class="form">
+        <form class="form" id="form">
             <input type="url" class="input" id="url-input" placeholder="Enter an URL" autocomplete="off">
             <button type="submit" class="generator" onclick="handleSubmit(event)">Get QR Code</button>
         </form>
@@ -31,6 +31,20 @@
                 <button class="download">DOWNLOAD <span><i class="bi bi-download"></i></span></button>
                 <button class="share">SHARE <span><i class="bi bi-share-fill"></i></span></button>
             </div>
+        </div>
+
+        <div class="share-modal">
+            <article>
+                <span class="close"><i class="bi bi-x-circle"></i></span>
+                <h2>Share QR Code</h2>
+
+                <div class="platforms">
+                    <a href="https://www.instagram.com/" target="_blank" class="icon" id="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" class="icon" id="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com/" target="_blank" class="icon" id="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="icon" id="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </article>
         </div>
     </main>
     <script src="./script.js"></script>

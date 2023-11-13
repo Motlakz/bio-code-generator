@@ -10,10 +10,34 @@ $light-gray: lightgray;
 $gray: darkslategray;
 $white: #fff;
 
+/* Mobile mixin */
+@mixin mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+}
+  
+/* Tablet mixin */
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+@keyframes polygon-in-opposing-corners {
+    from {
+        clip-path: polygon(0 0, 50% 50%, 100% 100%, 50% 50%);
+    }
+
+    to {
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    }
 }
 
 @keyframes wipe-in-down {
@@ -49,6 +73,11 @@ $white: #fff;
         .code-block {
             background-color: $teal;
             border: 2px dashed $tea-green;
+            figure {
+                img {
+                    border: 1px solid $tea-green;
+                }
+            }
         }
         .buttons {
             button {
@@ -58,6 +87,30 @@ $white: #fff;
 
                 &:hover {
                     border: 1px solid $tea-green;
+                }
+            }
+        }
+    }
+
+    .share-modal {
+        article {
+            border: 4px solid;
+            background-color: $white;
+
+            span.close {
+                color: $prussian-blue;
+
+                &:hover {
+                    color: $teal;
+                }
+            }
+        }
+        .platforms {            
+            .icon {
+                color: $charcoal;
+                &:hover {
+                    color: $teal;
+                    box-shadow: 0 0 40px $teal;
                 }
             }
         }
@@ -146,6 +199,16 @@ body {
                 padding: 20px;
                 height: 200px;
                 width: 200px;
+
+                figure {
+                    img {
+                        display: none;
+                        background-color: $white;
+                        border-radius: 8px;
+                        border: 1px solid $charcoal;
+                        padding: 20px;
+                    }
+                }
             }
 
             .buttons {
@@ -162,6 +225,82 @@ body {
                     &:hover {
                         background-color: $teal;
                         color: $tea-green;
+                    }
+                }
+            }
+        }
+
+        .share-modal {
+            display: none;
+            text-align: center;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            animation: polygon-in-opposing-corners 1s linear;
+
+            article {
+                background-color: $gray;
+                border: 4px solid $white;
+                border-radius: 8px;
+                padding: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                max-height: 100vh;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                max-width: 450px;
+                width: 50%;
+
+                @include mobile {
+                    width: 70%;
+                }
+
+                span.close {
+                    cursor: pointer;
+                    color: $white;
+                    float: right;
+                    font-size: 20px;
+
+                    &:hover {
+                        color: $tea-green;
+                    }
+                }
+
+                h2 {
+                    margin: 20px 0;
+                }
+            }
+
+            .platforms {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+
+                @include mobile {
+                    flex-wrap: wrap;
+                }
+
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 70px;
+                    width: 70px;
+                    padding: 5px;
+                    border-radius: 50%;
+                    font-size: 60px;
+                    color: #fff;
+                    transition: 0.5s ease;
+
+                    &:hover {
+                        font-size: 50px;
+                        color: $tea-green;
+                        box-shadow: 0 0 40px $tea-green;
                     }
                 }
             }
