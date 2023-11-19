@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function isValidUrl(url) {
-        // Simple URL validation, you might want to use a more robust library for this
+        // Simple URL validation, soon to use a more robust library
         const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
         return urlRegex.test(url);
     }
