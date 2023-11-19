@@ -18,10 +18,10 @@
 
 Users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
+- View the optimal layout for the app depending on the device's screen size
 - See focus states for all interactive elements on the page
 - Click on the QR code button to generate a new code based on the validity of the URL provided
-- Save to clipboard when they click on share button
+- See social media pop-ups when they try to share their code
 - See a QR code page when clicking on the download button where they can download from the browser
 
 ### Screenshot
