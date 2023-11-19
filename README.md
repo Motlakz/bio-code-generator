@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![App Screenshot](./assets/2023-11-14%2000_28_21-QR%20Code%20Generator.png)
+![App Screenshot](./QR%20Code%20Generator.png)
 
 ### Links
 
