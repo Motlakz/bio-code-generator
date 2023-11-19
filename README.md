@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Site](https://motlakz.github.io/bio-code-generator/)
+- Live Site URL: [Live Site](https://motlakz.github.io/uni-code-generator/)
 
 ## My process
 
